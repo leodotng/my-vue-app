@@ -49,4 +49,14 @@ epilogue.initialize({
     sequelize: database
 })
 
+let userResource = epilogue.resource({
+    model: Post,
+    endpoints: ['/posts', '/posts/:id']
+})
 
+database.sync({ force: true })
+.then(() => {
+    app.listen(8081, () => {
+        console.log('listening to port localhost:8081')
+    })
+})
