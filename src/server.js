@@ -1,9 +1,9 @@
 const express = require('express')
 const cors = require('cors')
-const bodyParser = ('body-parser')
-const Sequelize = ('sequelize')
+const bodyParser = require('body-parser')
+const Sequelize = require('sequelize')
 const epilogue = require('epilogue')
-const OktaJwtVerifier = require('@okta/jwt-veritifer')
+const OktaJwtVerifier = require('@okta/jwt-verifier')
 
 const oktaJwtVerifier = new OktaJwtVerifier({
     clientId: '0oaew74todQXdJhpA0h7',
